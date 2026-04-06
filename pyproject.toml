@@ -4,10 +4,11 @@ version = "1.0.0"
 description = "Smart grain silo monitoring OpenEnv environment"
 requires-python = ">=3.11"
 dependencies = [
+    "openenv-core>=0.2.0",
     "fastapi==0.115.0",
     "uvicorn==0.30.0",
     "pydantic==2.7.0",
-    "openai==1.40.0",
+    "openai>=2.7.2",
     "httpx==0.27.0",
     "requests==2.32.0",
     "pyyaml==6.0.1",
