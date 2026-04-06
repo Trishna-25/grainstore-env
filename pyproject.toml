@@ -1,24 +1,21 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.backends.legacy:build"
-
 [project]
 name = "grainstore-env"
 version = "1.0.0"
 description = "Smart grain silo monitoring OpenEnv environment"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
-    "fastapi>=0.104.0",
-    "uvicorn>=0.24.0",
-    "openenv-core",
-    "pydantic>=2.0",
-    "openai",
-    "httpx",
-    "pyyaml",
+    "fastapi==0.115.0",
+    "uvicorn==0.30.0",
+    "pydantic==2.7.0",
+    "openai==1.40.0",
+    "httpx==0.27.0",
+    "requests==2.32.0",
+    "pyyaml==6.0.1",
 ]
 
-[project.optional-dependencies]
-dev = ["pytest", "pytest-asyncio"]
+[project.scripts]
+server = "server.app:main"
 
-[tool.setuptools.packages.find]
-where = ["."]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
